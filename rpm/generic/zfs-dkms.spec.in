@@ -33,6 +33,12 @@ Requires(post): gcc, make, perl, diffutils
 Requires:       kernel-devel >= @ZFS_META_KVER_MIN@, kernel-devel <= @ZFS_META_KVER_MAX@.999
 Requires(post): kernel-devel >= @ZFS_META_KVER_MIN@, kernel-devel <= @ZFS_META_KVER_MAX@.999
 Conflicts:      kernel-devel < @ZFS_META_KVER_MIN@, kernel-devel > @ZFS_META_KVER_MAX@.999
+Requires:       kernel-core >= @ZFS_META_KVER_MIN@, kernel-core <= @ZFS_META_KVER_MAX@.999
+Requires(post): kernel-core >= @ZFS_META_KVER_MIN@, kernel-core <= @ZFS_META_KVER_MAX@.999
+Conflicts:      kernel-core < @ZFS_META_KVER_MIN@, kernel-core > @ZFS_META_KVER_MAX@.999
+Requires:       kernel >= @ZFS_META_KVER_MIN@, kernel <= @ZFS_META_KVER_MAX@.999
+Requires(post): kernel >= @ZFS_META_KVER_MIN@, kernel <= @ZFS_META_KVER_MAX@.999
+Conflicts:      kernel < @ZFS_META_KVER_MIN@, kernel > @ZFS_META_KVER_MAX@.999
 Obsoletes:      spl-dkms <= %{version}
 %endif
 Provides:       %{module}-kmod = %{version}
